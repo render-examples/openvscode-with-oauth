@@ -1,0 +1,9 @@
+services:
+- type: web
+  name: gitpod-openvscode-server-example
+  env: docker
+  repo: https://github.com/render-examples/gitpod-openvscode-server-example.git
+  disk:
+    name: data
+    mountPath: /home/workspace
+    sizeGB: 1
