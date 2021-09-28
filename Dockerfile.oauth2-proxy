@@ -7,4 +7,8 @@ USER root
 
 RUN apk --no-cache add curl
 
+ARG OPENVSCODE_HOSTPORT
+
+ENV OAUTH2_PROXY_UPSTREAMS="http://${OPENVSCODE_HOSTPORT}"
+
 ENTRYPOINT ["/bin/oauth2-proxy", "--config=./oauth2-proxy.cfg"]
